@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/student3_118006.ico">
+    <link rel="stylesheet" href="/static/CSS/mainstyle.css">
+    <link rel="stylesheet" href="/static/CSS/formstyle.css">
+    <title>Student Register</title>
+</head>
+{% include 'header.html' %}
+<body>
+    <h3>
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </h3>
+    <h1>
+        {% if error %}
+            {{ error }}
+        {% endif %}
+    </h1>
+    <div>
+        <h1>Register Yourself</h1>
+        <form action="{% url 'user_register' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required><br><br>
+
+            <label for="gender">Geneder:</label>
+            <input type="radio" id="gender" name="gender" value="male">Male
+            <input type="radio" id="gender" name="gender" value="Female">Female
+            <input type="radio" id="gender" name="gender" value="other">Other<br><br>
+
+            <label for="dofb">Date of Birth:</label>
+            <input type="date" id="dofb" name="dofb" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required><br><br>
+
+            <label for="phone">Number:</label>
+            <input type="number" id="phone" name="phone" required><br><br>
+
+            <label for="adress">Address:</label>
+            <input type="text" id="adress" name="address" required><br><br>
+            
+            <label for="s_class">Class:</label>
+            <select name="class" id="s_class" autofill="off">
+                <option value="">class</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>    
+                <option value="IV">IV</option>
+                <option value="V">V</option>
+                <option value="VI">VI</option>
+                <option value="VII">VII</option>
+                <option value="VIII">VIII</option>
+                <option value="IX">IX</option>
+                <option value="X">X</option>
+            </select><br><br>
+
+            <label for="s_school">School Name:</label>
+            <select name="s_school" id="s_school" autofill="off">
+                <option value="">select school</option>
+                <option value="st mary's">St Mary's School</option>
+                <option value="S_S_DEV">S. S. Dev Public School</option>
+                <option value="SSPS">Sun Shine Public School</option>
+                <option value="Honney Convent">Honey Convent Public School</option>
+                <option value="Other">Other</option>
+                <input type="text" id="s_name" name="s_name" placeholder="If other, please specify" autocomplete="off">
+            </select><br><br>
+
+            <label for="image">Upload Your Image:</label>
+            <input type="file" id="image" name="profile_picture" accept="image/*"><br><br><hr><hr>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder='username' autocomplete="off" required><br><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="c_password">Confirm Password:</label>
+            <input type="password" id="c_password" name="c_password" required><br><br><hr><hr>
+
+            <p>Fill here your parents details.</p>
+
+            <label for="f_name">Father's Name:</label>
+            <input type="text" id="f_name" name="f_name" required><br><br>
+
+            <label for="f_number">Phone Number:</label>
+            <input type="number" id="f_number" name="f_number" required><br><br>
+
+            <label for="f_occupation">Occupation:</label>
+            <input type="text" id="f_occupation" name="f_occupation" required><br><br>
+
+            <label for="m_name">Mother's Name:</label>
+            <input type="text" id="m_name" name="m_name" required><br><br>
+
+            <label for="m_occupation">Occupation:</label>
+            <input type="text" id="m_occupation" name="m_occupation" required><br><br>
+
+            <label for="terms">::</label>
+            <input type="checkbox" id="terms" name="terms" required>I agree to the <a href="#">terms and conditions</a><br><br>
+             
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

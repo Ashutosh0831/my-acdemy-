@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/student3_118006.ico">
+    <link rel="stylesheet" href="/static/CSS/mainstyle.css">
+    <title>M.V. Academy</title>
+</head>
+{% include '_header.html' %}
+<body>
+    <h1>
+        {% if user.is_authenticated %}
+            <h2>Welcome, {{ user.username }}!</h2>
+        {% endif %}
+    </h1>
+    <div class="vision">
+        <img src="\static\images\Maths Vision.png" alt="Not Found" class="f_image">
+        <div class="f_container">
+            <h1>Maths Vision Academy</h1>
+            <p>Welcome to the M.V. Academy! Here you can find resources to enhance your learning.</p>
+            <p>Explore our courses, access study materials, and connect with fellow students.</p>
+            <p>Whether you're looking to improve your skills or start from scratch, we have something for everyone.</p>
+            <p>Join us in our mission to make learning accessible and enjoyable for all.</p>
+            <p>Feel free to browse through our offerings and don't hesitate to reach out if you have any questions or need assistance.</p>
+            <p>Happy learning!</p>
+        </div>
+    </div><hr><hr>
+
+    <div class="news-section">
+        <h2>Latest News</h2>
+        <p>Stay updated with the latest news and announcements from M.V. Academy.</p>
+        <ul>
+            <li>New courses available for enrollment!</li>
+            <li>Upcoming webinars on advanced topics.</li>
+            <li>Check out our latest blog posts for tips and resources.</li>
+        </ul>
+    </div><hr><hr>
+
+    <div class="director-section">
+        <h2>Director</h2>
+        <p>Meet our director, who is dedicated to providing quality education and resources for all students.
+            <img src="\static\images\director-sir.png" alt="Director Image" class="director">
+        </p>
+        <img src="\static\images\about_me.png" alt="about me">
+        <p class="director-name">MRITYUNJAY PANDEY</p>
+        <h3>Education:</h3>
+        <ul>
+            <li>Bachelor of Education (B. Ed.)</li>
+            <li>U.P. TET (Qualified)</li>
+            <li>CTET (Qualified)</li>
+        </ul>
+    </div><hr><hr>
+
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+        <p>Email: <a href="mailto:monupandey200@gmail.com">Mrityunjay Pandey</a></p>
+        <p>Phone: +91 9026524231</p>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>

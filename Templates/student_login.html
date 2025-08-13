@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/student3_118006.ico">
+    <link rel="stylesheet" href="/static/CSS/mainstyle.css">
+    <link rel="stylesheet" href="/static/CSS/formstyle.css">
+    <title>Student Login</title>
+</head>
+{% include 'header.html' %}
+<body>
+    <div>
+        <h1>
+            Login to Your Account
+        </h1>
+        <form method="post"  action="{% url 'user_login' %}">
+            {% csrf_token %}
+            <p>Please enter your username and password to login.</p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" autocomplete="new-password" required>
+            <br>
+            <button type="submit">Login</button>
+
+            {% for message in messages %}
+                <p class="error">{{ message }}</p>
+            {% endfor %}
+            
+            <p>Don't have an account? <a href="{% url 'user_register' %}">Register here</a></p>
+            <p>Forgot your password? <a href="{% url 'reset_password' %}">Reset it</a></p>
+            <p>Back to Home <a href="{% url 'index' %}">Home</a></p>
+        </form>
+    </div>
+</body>
+</html>

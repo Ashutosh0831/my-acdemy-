@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/student3_118006.ico">
+    <link rel="stylesheet" href="/static/CSS/mainstyle.css">
+    <title>Student Dashboard</title>
+</head>
+{% include '_header.html' %}
+<body>
+    <div>
+        {% if user.is_authenticated %}
+            <h2>Welcome, {{ user.username }}!</h2>
+        {% endif %}
+            <p></p>
+    </div>
+    <div>
+        <h1>Welcome to the Student Dashboard</h1>
+        <p>Here you can manage your courses, view grades, and access resources.</p>
+        <!-- Add more content as needed -->
+    </div>
+</body>
+</html>

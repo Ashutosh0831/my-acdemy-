@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/student3_118006.ico">
+    <link rel="stylesheet" href="/static/CSS/mainstyle.css">
+    <link rel="stylesheet" href="/static/CSS/formstyle.css">
+    <title>Contact</title>
+</head>
+{% include 'header.html' %}
+<body>
+    <div>
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+        <p>Email: <a href="mailto:monupandey200@gmail.com">Mrityunjay Pandey</a></p>
+        <p>Phone: +91 9026524231</p>
+        <p>Address: M.V. Academy, Daak Bangla ke andar <b>Zamania , Ghazipur</b></p>
+        <p>We are here to help you with any inquiries or support you may need.</p>
+        <p>Feel free to contact us through the provided email or phone number.</p>
+    </div>
+    <div>
+        <h2>Submit your query here::</h2>
+        <form method="post" action="{% url 'contact_us' %}">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="abcd@gamil.com" required>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Text here " required></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

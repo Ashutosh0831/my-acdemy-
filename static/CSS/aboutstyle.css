@@ -1,0 +1,49 @@
+.about-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+.about-section h2 {
+    color: darkblue;
+}
+.about-section p {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.subject-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.subject-section h2 {
+    color: darkblue;
+    text-align: center;
+}
+.subject-section ul {
+    list-style-type: square;
+    padding: 0;
+}
+.subject-section li {
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+.unique-features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.unique-features h2 {
+    color: darkblue;
+    text-align: center;
+}
+.unique-features ul {
+    list-style-type: square;
+    padding: 0;
+}
+.unique-features li {
+    padding: 5px 0;
+    font-size: 1.1em;
+}

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/static/CSS/headerstyle.css">
+{% load static %}
+<header class="header-container">
+    <img src="{% static 'images/Maths Vision.png' %}" alt="Logo">
+    <nav>
+        <a href="{% url 'main' %}">Home</a>
+        <a href="{% url 'about_us' %}">About Us</a>
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+        <a href="{% url 'student_dashboard' %}">Dashboard</a>
+        <a href="{% url 'user_logout' %}">Logout</a>
+    </nav>
+</header>
