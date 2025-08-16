@@ -1,0 +1,149 @@
+body{
+    background-color: rgb(183, 230, 230);
+}
+hr{
+    border: 1px solid rgb(32, 114, 16);
+    margin: 20px 0;
+}
+h1{
+    color: darkblue;
+    text-align: center;
+    background-color: rgb(205, 213, 94);
+}
+p{
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+.vision{
+    display: flex;
+}
+.vision img{
+    height: 50%;
+    width: 50%;
+    border-radius: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.vision img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.vision div{
+    width: 50%;
+    padding: 20px;
+}
+.f_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.f_container p{
+    padding-left: 20px;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+.news-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.news-section h2{
+    color: darkblue;
+    text-align: center;
+}
+.news-section p{
+    padding-left: 20px;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+.news-section ul{
+    list-style-type: square;
+    padding: 0;
+}
+.news-section li{
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+.director-section{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: column;
+    padding: 20px;
+}
+.director-section h2{
+    color: darkblue;
+    text-align: center;
+}
+.director-section p{
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+.director-section p img{
+    float: right;
+}
+.director-section img{
+    height: 50%;
+    width: 50%;
+    border-radius: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.director-section img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.director-section .director-name {
+    text-align: center;
+    color: rgb(12, 197, 33);
+    font-weight: bold;
+    font-size: 3em;
+}
+div{
+    padding-top: 100px;
+}
+.contact-section {
+    text-align: center;
+    padding: 20px;
+}
+.contact-section h2 {
+    color: darkblue;
+}
+.contact-section p {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+.contact-section a {
+    color: rgba(10, 10, 10, 5);
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+    .vision, .f_container, .news-section, .director-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .vision img, .director-section img {
+        width: 80%;
+        height: auto;
+    }
+    .vision div, .f_container p, .news-section p, .director-section p {
+        width: 90%;
+        text-align: center;
+    }
+    .director-name {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+}
