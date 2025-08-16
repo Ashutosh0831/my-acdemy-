@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mv-academy-orle
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn mv_academy.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        value: 4bfcc7!&875u^16j53#*mmk4jtk1=1u+i)m+9t#4x!$i^o#bw+
