@@ -1,9 +1,15 @@
 services:
   - type: web
-    name: mv-academy-orle
+    name: mv-academy
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn mv_academy.wsgi:application
+    startCommand: gunicorn mv_academy.wsgi
     envVars:
       - key: SECRET_KEY
         value: 4bfcc7!&875u^16j53#*mmk4jtk1=1u+i)m+9t#4x!$i^o#bw+
+      - key: DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        value: sqlite:///db.sqlite3
+      - key: ALLOWED_HOSTS
+        value: mv-academy.onrender.com
