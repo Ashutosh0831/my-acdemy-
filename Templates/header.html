@@ -1,14 +1,28 @@
-<link rel="stylesheet" href="/static/CSS/headerstyle.css">
-{% load static %}
-<header>
-    <div class="header-container">
-        <img src="{% static 'images/Maths Vision.png' %}" alt="Logo">
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/headerstyle.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img src="{% static 'images/Maths Vision.png' %}" alt="Logo" />
         <nav>
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'about_us' %}">About Us</a>
-            <a href="{% url 'user_register' %}">Register</a>
-            <a href="{% url 'user_login' %}">Login</a>
-            <a href="{% url 'contact_us' %}">Contact Us</a>
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'about_us' %}">About Us</a>
+          <a href="{% url 'user_register' %}">Register</a>
+          <a href="{% url 'user_login' %}">Login</a>
+          <a href="{% url 'contact_us' %}">Contact Us</a>
         </nav>
-    </div>
-</header>
+      </div>
+    </header>
+
+    <script src="{% static 'JavaScript/header.js' %}"></script>
+  </body>
+</html>

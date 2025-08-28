@@ -1,69 +1,83 @@
-header{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #2c291e;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #2c291e;
 }
+
 .header-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #2c291e;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c291e;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-
+/* === Logo Styling === */
 .header-container img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
 }
 
+/* === Navigation Styling === */
 .header-container nav {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .header-container nav a {
-    color: rgb(207, 176, 36);
-    text-decoration: none;
-    padding: 5px 10px;
-    text-align: center;
+  color: rgb(207, 176, 36);
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+  transition: background-color 0.3s ease;
 }
 
-.header-container nav a:hover {
-    background-color: #d8dac4;
-    border-radius: 10px;
-}
-
+.header-container nav a:hover,
 .header-container nav a.active {
-    background-color: #d8dac4;
-    border-radius: 10px;
-    color: black;
+  background-color: #d8dac4;
+  border-radius: 10px;
+  color: black;
 }
 
+/* === Mobile View === */
 @media screen and (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
-    .header-container img {
-        margin-bottom: 10px;
-    }
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease-in-out;
+  }
 
-    .header-container nav {
-        flex-direction: column;
-        width: 100%;
-    }
+  .header-container img {
+    margin-bottom: 10px;
+  }
 
-    .header-container nav a {
-        width: 100%;
-        text-align: left;
-        padding: 10px 20px;
-    }
+  .header-container nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-container nav a {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .header-container.hide-on-scroll {
+    transform: translateY(-100%);
+  }
 }
