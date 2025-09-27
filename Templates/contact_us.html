@@ -20,9 +20,10 @@
         <p>Feel free to contact us through the provided email or phone number.</p>
     </div>
     <div>
-        <h2>Submit your query here::</h2>
+        
         <form method="post" action="{% url 'contact_us' %}">
             {% csrf_token %}
+            <h2>Submit your query here::</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Full Name" required>
             <br><br>
