@@ -119,12 +119,4 @@ nav {
     display: block;
     
   }
-
-  #moreBtn::before {
-    content: "";
-  }
-
-  #moreBtn.open::before {
-    content: "✖";
-  }
 }
